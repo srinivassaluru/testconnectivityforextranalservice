@@ -1,0 +1,14 @@
+<mvc:View controllerName="com.ui5.testconnectivityforextranalservice.controller.S1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <content >
+                <!-- <Select items="{/data}">
+                 <items>
+                    <core:Text text="{aboutAmtrak}"/>
+                 </items>
+                </Select> -->
+        </content>
+    </Page>
+</mvc:View>
