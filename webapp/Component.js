@@ -5,9 +5,10 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
-        "com/ui5/testconnectivityforextranalservice/model/models"
+        "com/ui5/testconnectivityforextranalservice/model/models",
+        "sap/ui/model/json/JSONModel"
     ],
-    function (UIComponent, Device, models) {
+    function (UIComponent, Device, models,JSONModel) {
         "use strict";
 
         return UIComponent.extend("com.ui5.testconnectivityforextranalservice.Component", {
@@ -29,6 +30,8 @@ sap.ui.define([
 
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
+
+                this.setModel(new JSONModel('model/Landing.json'), "localModel");
             }
         });
     }

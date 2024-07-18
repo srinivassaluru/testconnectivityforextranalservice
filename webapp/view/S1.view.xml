@@ -9,6 +9,7 @@
                     <core:Text text="{aboutAmtrak}"/>
                  </items>
                 </Select> -->
+                <FormattedText htmlText="{parts:[{path:'localModel>/0/htmlText'}, {path:'domainModel>/0/url'}],formatter:'com.ui5.testconnectivityforextranalservice.model.Formatter.changeContext'}"/>
         </content>
     </Page>
 </mvc:View>

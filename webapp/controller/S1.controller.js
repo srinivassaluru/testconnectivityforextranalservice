@@ -1,10 +1,13 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "com/ui5/testconnectivityforextranalservice/model/Formatter",
+    "sap/ui/model/json/JSONModel"
 ],
-function (Controller) {
+function (Controller,Formatter, JSONModel) {
     "use strict";
 
     return Controller.extend("com.ui5.testconnectivityforextranalservice.controller.S1", {
+        formatter: Formatter,
         onInit: function () {
 
         },
@@ -18,9 +21,17 @@ function (Controller) {
                     "X-CSRF-Token": "Fetch"
                 },
                 success: function (result) {
-                    debugger;
+                    // debugger;
                     console.log(result);
-                }
+                    var jsonModel = new JSONModel();
+                    jsonModel.setData([
+                        {
+                            url: "http://www.google.com"
+                        }
+                    ]);
+                    this.getView().setModel(jsonModel, "domainModel");
+                    
+                }.bind(this)
             });
 
         },
